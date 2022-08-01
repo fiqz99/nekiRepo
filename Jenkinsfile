@@ -1,11 +1,5 @@
 pipeline {
-    agent
-    {
-        node {
-                label 'master'
-                customWorkspace "${env.JobPath}"
-              }
-    }
+    agent any
 
     stages 
     {

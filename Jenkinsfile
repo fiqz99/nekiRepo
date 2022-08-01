@@ -6,7 +6,6 @@ pipeline {
         stage('Start') {
             steps {
                 sh 'ls'
-                currentBuild.displayName = "test1"
             }
         }
 

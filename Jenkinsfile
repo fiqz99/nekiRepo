@@ -1,5 +1,4 @@
-node {
-  stage('Build') {
-  printl($BOOLEAN)
-  }
+node()
+{
+     print "DEBUG: parameter foo = ${env.BOOLEAN}"
 }

@@ -1,4 +1,32 @@
-node()
-{
-     print "DEBUG: parameter foo = sad"
+pipeline {
+    agent
+    {
+        node {
+                label 'master'
+                customWorkspace "${env.JobPath}"
+              }
+    }
+
+    stages 
+    {
+        stage('Start') {
+            steps {
+                sh 'ls'
+            }
+        }
+
+        stage ('Invoke_pipeline') {
+            steps {
+                build job: 'pipeline-2', parameters: [
+                string(name: 'param1', value: "value1")
+                ]
+            }
+        }
+
+        stage('End') {
+            steps {
+                sh 'ls'
+            }
+        }
+    }
 }

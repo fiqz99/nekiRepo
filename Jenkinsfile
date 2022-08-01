@@ -1,4 +1,4 @@
 node()
 {
-     print "DEBUG: parameter foo = ${env.BOOLEAN}"
+     print "DEBUG: parameter foo = sad"
 }

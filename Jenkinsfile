@@ -11,9 +11,7 @@ pipeline {
 
         stage ('Invoke_pipeline') {
             steps {
-                build job: 'pipeline-2', parameters: [
-                string(name: 'param1', value: "value1")
-                ]
+                sh 'ls'
             }
         }
 

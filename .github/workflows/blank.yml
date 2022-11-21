@@ -39,7 +39,7 @@ jobs:
         env: 
           SOME_SECRET: ${{ secrets.DOCKERHUB_PWD }}
         run: |
-          docker build -t fiqz99/proba123
+          docker build -t fiqz99/proba123 .
           docker login -u fiqz99 -p "SOME_SECRET"
           docker push fiqz99/proba123
           docker logout

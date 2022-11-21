@@ -37,7 +37,7 @@ jobs:
           
       - name: Docker 
         run: |
-          docker build -t fiqz99/proba123
+          docker build -t fiqz99/proba123 .
           docker login -u fiqz99 -p ${{ secrets.DOCKERHUB_PWD }}
           docker push fiqz99/proba123
           docker logout

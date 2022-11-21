@@ -36,4 +36,4 @@ jobs:
           echo test, and deploy your project.
           
       - name: Docker 
-        run: docker images
+        run: docker build .
